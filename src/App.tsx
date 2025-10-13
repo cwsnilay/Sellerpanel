@@ -44,6 +44,8 @@ function App() {
         return <Reviews />;
       case 'supports':
         return <Support />;
+      case 'help':
+        return <Help />;
       case 'selling-fees':
         return <SellingFeesCalculator />;
       case 'credit-card':
