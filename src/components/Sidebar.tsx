@@ -30,6 +30,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
     { id: 'transactions', label: 'Transactions', icon: CreditCard },
     { id: 'reviews', label: 'Reviews', icon: Star },
     { id: 'supports', label: 'Support', icon: HelpCircle },
+    { id: 'help', label: 'Help', icon: HelpCircle },
     { id: 'selling-fees', label: 'Selling Fees Calculator', icon: Calculator },
     { id: 'credit-card', label: 'Credit Card Management', icon: CreditCard },
     { id: 'scoring', label: 'Scoring', icon: Target },
