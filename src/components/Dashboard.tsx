@@ -391,16 +391,16 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-teal-600">
+            <thead style={{ backgroundColor: '#474747' }}>
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Order</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Date/Time</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Products</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Base Total</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Purchase Total</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Tax</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Status</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">View</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Order</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Date/Time</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Products</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Base Total</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Purchase Total</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Tax</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Status</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>View</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -443,15 +443,15 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-teal-600">
+            <thead style={{ backgroundColor: '#474747' }}>
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Product Name</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Price</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Status</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Type</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">SKU</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Created At</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Visibility</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Product Name</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Price</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Status</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Type</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>SKU</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Created At</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Visibility</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -482,15 +482,15 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-teal-600">
+            <thead style={{ backgroundColor: '#474747' }}>
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Ticket Id</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Message</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Department</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Agent Name</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Status</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Priority</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Action</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Ticket Id</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Message</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Department</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Agent Name</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Status</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Priority</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Action</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -526,14 +526,14 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-teal-600">
+            <thead style={{ backgroundColor: '#474747' }}>
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Transaction Type</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Income Amount</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Expense Amount</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Net Amount</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Status</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Created Date</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Transaction Type</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Income Amount</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Expense Amount</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Net Amount</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Status</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Created Date</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -563,13 +563,13 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-teal-600">
+            <thead style={{ backgroundColor: '#474747' }}>
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Customer Name</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Product Sku</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Review Title</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Review Text</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Rating Summary for client</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Customer Name</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Product Sku</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Review Title</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Review Text</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Rating Summary for client</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -599,13 +599,13 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-teal-600">
+            <thead style={{ backgroundColor: '#474747' }}>
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">#</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Order</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Shipment</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Date/Time</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Products</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>#</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Order</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Shipment</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Date/Time</th>
+                <th className="px-4 text-left text-xs font-semibold text-white uppercase tracking-wider" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>Products</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
