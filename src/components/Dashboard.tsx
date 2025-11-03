@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import { 
-  ShoppingCart, 
-  Package, 
-  CreditCard, 
-  TrendingUp, 
-  Eye, 
+import {
+  ShoppingCart,
+  Package,
+  CreditCard,
+  TrendingUp,
+  Eye,
   Calendar,
   MapPin,
   Star,
   DollarSign,
-  ChevronDown
+  ChevronDown,
+  ArrowUpCircle,
+  ArrowDownCircle,
+  Wallet
 } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
@@ -320,12 +323,44 @@ const Dashboard: React.FC = () => {
         <div className="col-span-3 space-y-4">
           {/* Transactions */}
           <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-            <h3 className="text-sm font-medium text-gray-900 mb-3">Transaction</h3>
+            <h3 className="text-sm font-medium text-gray-900 mb-4">Transaction</h3>
+
+            {/* Financial Summary Cards */}
+            <div className="grid grid-cols-3 gap-3 mb-4">
+              {/* Total Earned */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-3 border border-green-200">
+                <div className="flex items-center justify-between mb-2">
+                  <ArrowUpCircle size={20} className="text-green-600" />
+                  <span className="text-xs font-medium text-green-700">Earned</span>
+                </div>
+                <p className="text-lg font-bold text-green-900">$315.49</p>
+              </div>
+
+              {/* Total Withdrawn */}
+              <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-lg p-3 border border-red-200">
+                <div className="flex items-center justify-between mb-2">
+                  <ArrowDownCircle size={20} className="text-red-600" />
+                  <span className="text-xs font-medium text-red-700">Withdrawn</span>
+                </div>
+                <p className="text-lg font-bold text-red-900">$0.00</p>
+              </div>
+
+              {/* Balance */}
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-3 border border-blue-200">
+                <div className="flex items-center justify-between mb-2">
+                  <Wallet size={20} className="text-blue-600" />
+                  <span className="text-xs font-medium text-blue-700">Balance</span>
+                </div>
+                <p className="text-lg font-bold text-blue-900">$315.49</p>
+              </div>
+            </div>
+
+            {/* Transaction List */}
             <div className="space-y-2">
               {transactions.map((transaction, index) => (
-                <div key={index} className="flex justify-between items-center text-sm">
+                <div key={index} className="flex justify-between items-center text-sm py-1">
                   <span className="text-gray-600">{transaction.id}</span>
-                  <span className="font-medium">{transaction.amount}</span>
+                  <span className="font-medium text-gray-900">{transaction.amount}</span>
                 </div>
               ))}
             </div>
