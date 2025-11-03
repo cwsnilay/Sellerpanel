@@ -356,16 +356,16 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gray-800 text-white">
+            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-sm font-medium">Order</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Date/Time</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Products</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Base Total</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Purchase Total</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Tax</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Status</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">View</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Order</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Date/Time</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Products</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Base Total</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Purchase Total</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Tax</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Status</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">View</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -408,15 +408,15 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gray-800 text-white">
+            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-sm font-medium">Product Name</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Price</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Status</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Type</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">SKU</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Created At</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Visibility</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Product Name</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Price</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Status</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Type</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">SKU</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Created At</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Visibility</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -447,15 +447,15 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gray-800 text-white">
+            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-sm font-medium">Ticket Id</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Message</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Department</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Agent Name</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Status</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Priority</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Action</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Ticket Id</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Message</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Department</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Agent Name</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Status</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Priority</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Action</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -491,14 +491,14 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gray-800 text-white">
+            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-sm font-medium">Transaction Type</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Income Amount</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Expense Amount</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Net Amount</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Status</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Created Date</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Transaction Type</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Income Amount</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Expense Amount</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Net Amount</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Status</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Created Date</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -528,13 +528,13 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gray-800 text-white">
+            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-sm font-medium">Customer Name</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Product Sku</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Review Title</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Review Text</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Rating Summary for client</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Customer Name</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Product Sku</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Review Title</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Review Text</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Rating Summary for client</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -564,13 +564,13 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gray-800 text-white">
+            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-sm font-medium">#</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Order</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Shipment</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Date/Time</th>
-                <th className="px-4 py-3 text-left text-sm font-medium">Products</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">#</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Order</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Shipment</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Date/Time</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Products</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
