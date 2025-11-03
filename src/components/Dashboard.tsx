@@ -269,47 +269,48 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
+      <div className="space-y-6 p-6">
       {/* Top Row - Stats, Lifetime Sales, Map, Transactions, Activities */}
       <div className="grid grid-cols-12 gap-6">
         {/* Stats */}
         <div className="col-span-2 space-y-4">
           {stats.map((stat, index) => (
-            <div key={index} className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+            <div key={index} className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white hover:shadow-xl transition-all duration-300">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-gray-600 text-sm">{stat.label}</p>
-                  <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
+                  <p className="text-slate-600 text-sm font-medium">{stat.label}</p>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">{stat.value}</p>
                 </div>
-                <div className={`w-8 h-8 ${stat.color} rounded`}></div>
+                <div className={`w-10 h-10 ${stat.color} rounded-xl shadow-md`}></div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Lifetime Sales */}
-        <div className="col-span-3 bg-gray-800 text-white rounded-lg p-4">
-          <h3 className="text-sm font-medium mb-2">Lifetime Sales</h3>
-          <p className="text-2xl font-bold">₹ 320.29K</p>
-          <div className="mt-4 h-32 bg-gray-700 rounded flex items-center justify-center">
+        <div className="col-span-3 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 text-white rounded-xl p-6 shadow-xl">
+          <h3 className="text-sm font-semibold mb-2 text-slate-300">Lifetime Sales</h3>
+          <p className="text-3xl font-bold">₹ 320.29K</p>
+          <div className="mt-4 h-32 bg-slate-900/50 backdrop-blur-sm rounded-lg flex items-center justify-center border border-slate-700/50">
             <div className="text-center">
-              <MapPin size={32} className="text-gray-400 mx-auto mb-2" />
-              <p className="text-xs text-gray-400">Sales visualization</p>
+              <MapPin size={32} className="text-slate-400 mx-auto mb-2" />
+              <p className="text-xs text-slate-400">Sales visualization</p>
             </div>
           </div>
         </div>
 
         {/* Map */}
-        <div className="col-span-4 bg-white rounded-lg p-4 shadow-sm border border-gray-100">
-          <div className="h-48 bg-gray-100 rounded flex items-center justify-center relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-emerald-100 rounded">
+        <div className="col-span-4 bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white">
+          <div className="h-48 rounded-lg flex items-center justify-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-100 rounded-lg">
               <div className="flex items-center justify-center h-full">
-                <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+                <div className="w-5 h-5 bg-emerald-500 rounded-full animate-pulse shadow-lg"></div>
               </div>
             </div>
-            <div className="absolute bottom-2 left-2 text-xs text-gray-600">
+            <div className="absolute bottom-3 left-3 text-xs font-semibold text-slate-700 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-md">
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                 <span>₹85,156 ₹ 85,156.4</span>
               </div>
             </div>
@@ -319,26 +320,26 @@ const Dashboard: React.FC = () => {
         {/* Transactions & Activities */}
         <div className="col-span-3 space-y-4">
           {/* Transactions */}
-          <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
-            <h3 className="text-sm font-medium text-gray-900 mb-3">Transaction</h3>
-            <div className="space-y-2">
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl p-5 shadow-lg border border-white hover:shadow-xl transition-all duration-300">
+            <h3 className="text-sm font-semibold text-slate-900 mb-3">Transaction</h3>
+            <div className="space-y-3">
               {transactions.map((transaction, index) => (
-                <div key={index} className="flex justify-between items-center text-sm">
-                  <span className="text-gray-600">{transaction.id}</span>
-                  <span className="font-medium">{transaction.amount}</span>
+                <div key={index} className="flex justify-between items-center text-sm p-2 hover:bg-slate-50 rounded-lg transition-colors">
+                  <span className="text-slate-600 font-medium">{transaction.id}</span>
+                  <span className="font-bold text-slate-900">{transaction.amount}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Activities */}
-          <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
-            <h3 className="text-sm font-medium text-gray-900 mb-3">Activities</h3>
-            <div className="space-y-2">
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl p-5 shadow-lg border border-white hover:shadow-xl transition-all duration-300">
+            <h3 className="text-sm font-semibold text-slate-900 mb-3">Activities</h3>
+            <div className="space-y-3">
               {activities.map((activity, index) => (
-                <div key={index} className="text-sm">
-                  <div className="text-gray-500">{activity.time}</div>
-                  <div className="text-gray-700">{activity.activity}</div>
+                <div key={index} className="text-sm p-2 hover:bg-slate-50 rounded-lg transition-colors">
+                  <div className="text-slate-500 text-xs font-medium">{activity.time}</div>
+                  <div className="text-slate-700 font-medium">{activity.activity}</div>
                 </div>
               ))}
             </div>
@@ -347,52 +348,52 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Latest Orders */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-        <div className="p-4 border-b border-gray-100 flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-gray-900">Latest Orders</h3>
-          <button className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+      <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl border border-white overflow-hidden">
+        <div className="p-6 border-b border-slate-200 flex justify-between items-center bg-gradient-to-r from-slate-50 to-blue-50">
+          <h3 className="text-lg font-bold text-slate-900">Latest Orders</h3>
+          <button className="text-blue-600 hover:text-blue-700 text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-50 transition-all">
             View All Orders
           </button>
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
+            <thead className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Order</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Date/Time</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Products</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Base Total</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Purchase Total</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Tax</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Status</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">View</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Order</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Date/Time</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Products</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Base Total</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Purchase Total</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Tax</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Status</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">View</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white/50 backdrop-blur-sm divide-y divide-slate-200">
               {latestOrders.map((order) => (
-                <tr key={order.id} className="hover:bg-gray-50">
-                  <td className="px-4 py-3 text-sm font-medium text-gray-900">{order.id}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{order.date}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">
+                <tr key={order.id} className="hover:bg-white/80 transition-colors">
+                  <td className="px-6 py-4 text-sm font-bold text-slate-900">{order.id}</td>
+                  <td className="px-6 py-4 text-sm text-slate-600">{order.date}</td>
+                  <td className="px-6 py-4 text-sm text-slate-600">
                     <div className="space-y-1">
                       {order.products.slice(0, 2).map((product, idx) => (
-                        <div key={idx}>{product}</div>
+                        <div key={idx} className="font-medium">{product}</div>
                       ))}
                       {order.products.length > 2 && (
-                        <div className="text-gray-400">+{order.products.length - 2} more</div>
+                        <div className="text-slate-400 font-semibold">+{order.products.length - 2} more</div>
                       )}
                     </div>
                   </td>
-                  <td className="px-4 py-3 text-sm font-medium text-gray-900">{order.baseTotal}</td>
-                  <td className="px-4 py-3 text-sm font-medium text-gray-900">{order.purchaseTotal}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{order.tax}</td>
-                  <td className="px-4 py-3">
-                    <span className={`inline-flex px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(order.status)}`}>
+                  <td className="px-6 py-4 text-sm font-bold text-slate-900">{order.baseTotal}</td>
+                  <td className="px-6 py-4 text-sm font-bold text-slate-900">{order.purchaseTotal}</td>
+                  <td className="px-6 py-4 text-sm text-slate-600">{order.tax}</td>
+                  <td className="px-6 py-4">
+                    <span className={`inline-flex px-3 py-1 rounded-lg text-xs font-bold ${getStatusColor(order.status)}`}>
                       {order.status}
                     </span>
                   </td>
-                  <td className="px-4 py-3">
-                    <button className="text-blue-600 hover:text-blue-800 text-sm">View</button>
+                  <td className="px-6 py-4">
+                    <button className="text-blue-600 hover:text-blue-700 text-sm font-semibold hover:underline">View</button>
                   </td>
                 </tr>
               ))}
@@ -402,37 +403,37 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Recently Added Products */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-        <div className="p-4 border-b border-gray-100 flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-gray-900">Recently Added Products</h3>
+      <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl border border-white overflow-hidden">
+        <div className="p-6 border-b border-slate-200 flex justify-between items-center bg-gradient-to-r from-slate-50 to-blue-50">
+          <h3 className="text-lg font-bold text-slate-900">Recently Added Products</h3>
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
+            <thead className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Product Name</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Price</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Status</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Type</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">SKU</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Created At</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Visibility</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Product Name</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Price</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Status</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Type</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">SKU</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Created At</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Visibility</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white/50 backdrop-blur-sm divide-y divide-slate-200">
               {recentProducts.map((product) => (
-                <tr key={product.id} className="hover:bg-gray-50">
-                  <td className="px-4 py-3 text-sm text-gray-900">{product.name}</td>
-                  <td className="px-4 py-3 text-sm font-medium text-gray-900">{product.price}</td>
-                  <td className="px-4 py-3">
-                    <span className={`inline-flex px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(product.status)}`}>
+                <tr key={product.id} className="hover:bg-white/80 transition-colors">
+                  <td className="px-6 py-4 text-sm font-bold text-slate-900">{product.name}</td>
+                  <td className="px-6 py-4 text-sm font-bold text-slate-900">{product.price}</td>
+                  <td className="px-6 py-4">
+                    <span className={`inline-flex px-3 py-1 rounded-lg text-xs font-bold ${getStatusColor(product.status)}`}>
                       {product.status}
                     </span>
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{product.type}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{product.sku}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{product.createdAt}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{product.quantity}</td>
+                  <td className="px-6 py-4 text-sm text-slate-600">{product.type}</td>
+                  <td className="px-6 py-4 text-sm text-slate-600">{product.sku}</td>
+                  <td className="px-6 py-4 text-sm text-slate-600">{product.createdAt}</td>
+                  <td className="px-6 py-4 text-sm text-slate-600">{product.quantity}</td>
                 </tr>
               ))}
             </tbody>
@@ -441,38 +442,38 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Latest Seller Tickets */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-        <div className="p-4 border-b border-gray-100 flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-gray-900">Latest Seller Tickets</h3>
+      <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl border border-white overflow-hidden">
+        <div className="p-6 border-b border-slate-200 flex justify-between items-center bg-gradient-to-r from-slate-50 to-blue-50">
+          <h3 className="text-lg font-bold text-slate-900">Latest Seller Tickets</h3>
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
+            <thead className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Ticket Id</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Message</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Department</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Agent Name</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Status</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Priority</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Action</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Ticket Id</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Message</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Department</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Agent Name</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Status</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Priority</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Action</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white/50 backdrop-blur-sm divide-y divide-slate-200">
               {sellerTickets.map((ticket) => (
-                <tr key={ticket.id} className="hover:bg-gray-50">
-                  <td className="px-4 py-3 text-sm font-medium text-gray-900">{ticket.id}</td>
-                  <td className="px-4 py-3 text-sm text-gray-900">{ticket.message}</td>
-                  <td className="px-4 py-3 text-sm text-gray-900">{ticket.department}</td>
-                  <td className="px-4 py-3 text-sm text-gray-900">{ticket.agentName}</td>
-                  <td className="px-4 py-3">
-                    <span className={`inline-flex px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(ticket.status)}`}>
+                <tr key={ticket.id} className="hover:bg-white/80 transition-colors">
+                  <td className="px-6 py-4 text-sm font-bold text-slate-900">{ticket.id}</td>
+                  <td className="px-6 py-4 text-sm text-slate-900">{ticket.message}</td>
+                  <td className="px-6 py-4 text-sm text-slate-900">{ticket.department}</td>
+                  <td className="px-6 py-4 text-sm text-slate-900">{ticket.agentName}</td>
+                  <td className="px-6 py-4">
+                    <span className={`inline-flex px-3 py-1 rounded-lg text-xs font-bold ${getStatusColor(ticket.status)}`}>
                       {ticket.status}
                     </span>
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-900">{ticket.priority}</td>
-                  <td className="px-4 py-3">
-                    <button className="text-blue-600 hover:text-blue-800 text-sm">Reply</button>
+                  <td className="px-6 py-4 text-sm text-slate-900">{ticket.priority}</td>
+                  <td className="px-6 py-4">
+                    <button className="text-blue-600 hover:text-blue-700 text-sm font-semibold hover:underline">Reply</button>
                   </td>
                 </tr>
               ))}
@@ -482,38 +483,38 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Recently Transaction */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-        <div className="p-4 border-b border-gray-100 flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-gray-900">Recently Transaction</h3>
-          <button className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+      <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl border border-white overflow-hidden">
+        <div className="p-6 border-b border-slate-200 flex justify-between items-center bg-gradient-to-r from-slate-50 to-blue-50">
+          <h3 className="text-lg font-bold text-slate-900">Recently Transaction</h3>
+          <button className="text-blue-600 hover:text-blue-700 text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-50 transition-all">
             View All Transaction
           </button>
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
+            <thead className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Transaction Type</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Income Amount</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Expense Amount</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Net Amount</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Status</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Created Date</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Transaction Type</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Income Amount</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Expense Amount</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Net Amount</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Status</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Created Date</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white/50 backdrop-blur-sm divide-y divide-slate-200">
               {recentTransactions.map((transaction, index) => (
-                <tr key={index} className="hover:bg-gray-50">
-                  <td className="px-4 py-3 text-sm text-gray-900">{transaction.type}</td>
-                  <td className="px-4 py-3 text-sm font-medium text-gray-900">{transaction.incomeAmount}</td>
-                  <td className="px-4 py-3 text-sm text-gray-900">{transaction.expenseAmount}</td>
-                  <td className="px-4 py-3 text-sm font-medium text-gray-900">{transaction.netAmount}</td>
-                  <td className="px-4 py-3">
-                    <span className={`inline-flex px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(transaction.status)}`}>
+                <tr key={index} className="hover:bg-white/80 transition-colors">
+                  <td className="px-6 py-4 text-sm text-slate-900">{transaction.type}</td>
+                  <td className="px-6 py-4 text-sm font-bold text-slate-900">{transaction.incomeAmount}</td>
+                  <td className="px-6 py-4 text-sm text-slate-900">{transaction.expenseAmount}</td>
+                  <td className="px-6 py-4 text-sm font-bold text-slate-900">{transaction.netAmount}</td>
+                  <td className="px-6 py-4">
+                    <span className={`inline-flex px-3 py-1 rounded-lg text-xs font-bold ${getStatusColor(transaction.status)}`}>
                       {transaction.status}
                     </span>
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{transaction.createdDate}</td>
+                  <td className="px-6 py-4 text-sm text-slate-600">{transaction.createdDate}</td>
                 </tr>
               ))}
             </tbody>
@@ -522,32 +523,32 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Recently Product Review */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-        <div className="p-4 border-b border-gray-100 flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-gray-900">Recently Product Review</h3>
+      <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl border border-white overflow-hidden">
+        <div className="p-6 border-b border-slate-200 flex justify-between items-center bg-gradient-to-r from-slate-50 to-blue-50">
+          <h3 className="text-lg font-bold text-slate-900">Recently Product Review</h3>
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
+            <thead className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Customer Name</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Product Sku</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Review Title</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Review Text</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Rating Summary for client</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Customer Name</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Product Sku</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Review Title</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Review Text</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Rating Summary for client</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white/50 backdrop-blur-sm divide-y divide-slate-200">
               {productReviews.map((review) => (
-                <tr key={review.id} className="hover:bg-gray-50">
-                  <td className="px-4 py-3 text-sm text-gray-900">{review.customer}</td>
-                  <td className="px-4 py-3 text-sm text-gray-900">{review.productSku}</td>
-                  <td className="px-4 py-3 text-sm text-gray-900">{review.product}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600 max-w-xs truncate">{review.reviewText}</td>
-                  <td className="px-4 py-3">
+                <tr key={review.id} className="hover:bg-white/80 transition-colors">
+                  <td className="px-6 py-4 text-sm font-bold text-slate-900">{review.customer}</td>
+                  <td className="px-6 py-4 text-sm text-slate-900">{review.productSku}</td>
+                  <td className="px-6 py-4 text-sm font-bold text-slate-900">{review.product}</td>
+                  <td className="px-6 py-4 text-sm text-slate-600 max-w-xs truncate">{review.reviewText}</td>
+                  <td className="px-6 py-4">
                     <div className="flex items-center space-x-2">
                       {renderStars(review.rating)}
-                      <span className="text-sm text-gray-600">{review.reviewSummary}</span>
+                      <span className="text-sm text-slate-600">{review.reviewSummary}</span>
                     </div>
                   </td>
                 </tr>
@@ -558,35 +559,35 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Shipping Order */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-        <div className="p-4 border-b border-gray-100 flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-gray-900">Shipping Order</h3>
+      <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl border border-white overflow-hidden">
+        <div className="p-6 border-b border-slate-200 flex justify-between items-center bg-gradient-to-r from-slate-50 to-blue-50">
+          <h3 className="text-lg font-bold text-slate-900">Shipping Order</h3>
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
-            <thead className="bg-gradient-to-r from-slate-700 to-slate-800">
+            <thead className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800">
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">#</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Order</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Shipment</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Date/Time</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-slate-100 uppercase tracking-wider">Products</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">#</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Order</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Shipment</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Date/Time</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Products</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white/50 backdrop-blur-sm divide-y divide-slate-200">
               {shippingOrders.map((order, index) => (
-                <tr key={order.id} className="hover:bg-gray-50">
-                  <td className="px-4 py-3 text-sm text-gray-900">{index + 1}</td>
-                  <td className="px-4 py-3 text-sm font-medium text-gray-900">{order.id}</td>
-                  <td className="px-4 py-3 text-sm text-gray-900">{order.shipment}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{order.date}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">
+                <tr key={order.id} className="hover:bg-white/80 transition-colors">
+                  <td className="px-6 py-4 text-sm text-slate-900">{index + 1}</td>
+                  <td className="px-6 py-4 text-sm font-bold text-slate-900">{order.id}</td>
+                  <td className="px-6 py-4 text-sm text-slate-900">{order.shipment}</td>
+                  <td className="px-6 py-4 text-sm text-slate-600">{order.date}</td>
+                  <td className="px-6 py-4 text-sm text-slate-600">
                     <div className="space-y-1">
                       {order.products.slice(0, 2).map((product, idx) => (
-                        <div key={idx}>{product}</div>
+                        <div key={idx} className="font-medium">{product}</div>
                       ))}
                       {order.products.length > 2 && (
-                        <div className="text-gray-400">+{order.products.length - 2} more</div>
+                        <div className="text-slate-400 font-semibold">+{order.products.length - 2} more</div>
                       )}
                     </div>
                   </td>
@@ -598,16 +599,17 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Order Shipping Pickup */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-        <div className="p-4 border-b border-gray-100">
-          <h3 className="text-lg font-semibold text-gray-900">Order Shipping Pickup</h3>
+      <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl border border-white overflow-hidden">
+        <div className="p-6 border-b border-slate-200 bg-gradient-to-r from-slate-50 to-blue-50">
+          <h3 className="text-lg font-bold text-slate-900">Order Shipping Pickup</h3>
         </div>
-        <div className="p-4">
-          <div className="text-center text-gray-500">
-            <p>No scheduled pickup records</p>
+        <div className="p-8">
+          <div className="text-center text-slate-500">
+            <p className="font-medium">No scheduled pickup records</p>
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
